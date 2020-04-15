@@ -58,4 +58,9 @@ class Database{
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function rowCount(){
+        //rowCount yang di atas itu punya kita, sedangkan yang di bawah itu punya PDO
+        return $this->stmt->rowCount();
+    }
 }
